@@ -36,8 +36,8 @@
     ##### Setelah menginstal git lakukan setup awal
     &nbsp;
     ```markdown
-    git config --global user.name "FaizalRajib"
-    git config --global user.email "muhfaizalrajib@gmail.com"
+    git config --global user.name "riskidwiputra"
+    git config --global user.email "riskidwiputra1250@gmail.com"
     ```
  - git init <nama_proyek>, untuk membuat repositori baru
     ```markdown
