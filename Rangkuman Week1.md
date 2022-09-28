@@ -32,7 +32,13 @@
 &nbsp;
 
 - ### Command di dalam Git & Github
-
+    
+    ##### Setelah menginstal git lakukan setup awal
+    &nbsp;
+    ```markdown
+    git config --global user.name "FaizalRajib"
+    git config --global user.email "muhfaizalrajib@gmail.com"
+    ```
  - git init <nama_proyek>, untuk membuat repositori baru
     ```markdown
      git init rangkuman
@@ -41,64 +47,82 @@
  -  git status, untuk lacak perubahan
     ```markdown
     git status
+    On branch master
+    No commits yet
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+        Rangkuman Week1.md
     ```
 
- - Untuk menyimpan perubahan file 
+ - git add ,Untuk menyimpan perubahan file 
     ```markdown
     git add . 
     ```
 
   - git commit, untuk melakukan commit atau menyimpan perubahan pada version control pada git. Dan kita bisa menambahkan pesan untuk membeikan checkout pada setiap perbuahan. contohnya "git commit -m "pesan checkout"
 
-    ![git-commit1](<https://raw.githubusercontent.com/Jirjatss/week-1/main/gambar/git-commit1%20(1).jpg>)
-
+       ```markdown
+     git commit -m "rangkuman pertama"
+    [master (root-commit) 3206437] rangkuman pertama
+    1 file changed, 440 insertions(+)
+    create mode 100644 Rangkuman Week1.md
+    ```
+ - git remote, menambahkan remote di dalam repository lokal
+    ```markdown
+    git remote add origin https://github.com/riskidwiputra/rangkuman.git
+    ```
   - git push origin, untuk mempublish file atau aplikasi ke github
 
-    ![git-push](https://raw.githubusercontent.com/Jirjatss/week-1/main/gambar/git-push%20-%20Copy.JPG)
-
+    ```markdown
+    git push origin master
+    Enumerating objects: 3, done.
+    Counting objects: 100% (3/3), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (2/2), done.
+    Writing objects: 100% (3/3), 4.47 KiB | 4.47 MiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/riskidwiputra/rangkuman.git
+    * [new branch]      master -> master
+    ```
+    Biasaya ketika belum pernah menghubungkan github di git local kita biasanya akan diminta Authorize Git ini hanya akan diminta 1 kali saja 
+    ![git-clone](<https://i.ibb.co/NZZHGnP/gac.png>)
   - git clone, untuk melakukan cloning dari github ke komputer atau local
+    ```markdown
+        git clone https://github.com/riskidwiputra/rangkuman.git
+    ```
 
-    ![git-clone](<https://raw.githubusercontent.com/Jirjatss/week-1/main/gambar/git-clone%20(1).JPG>)
-
-## HTML
+  ## HTML (HyperText Markup Language) (20 September 2022)
 
 - Definisi HTML
 
-  <div align="justify">Merupakan bahasa komputer yang digunakan untuk membuat kerangka atau struktur untuk Web pages (halaman website) di internet. Bagaimana peran HTML pada web development? Web browser seperti Chrome, Firefox, Edge, Safari, atau Opera akan membaca dokumen HTML. Dokumen HTML yang berisi tag-tag HTML akan memberitahu browser bagaimana cara menampilkan sebuah konten.
+    Merupakan bahasa komputer yang digunakan untuk membuat kerangka atau struktur untuk Web pages (halaman website) di internet. Digunakan akan memberitahu browser bagaimana cara menampilkan sebuah konten.
 
-&nbsp;
 
 - Kerangka HTML
 
   HTML memiliki sebuah kerangka seperti gambar dibawah ini
 
   ```html
-  <html>
-  <head>
-  <title>
-      Judul Website
-    </title>
-  <body>
-      saya sedang belajar pemrograman HTML dasar.
-    </body>
-  </html>
-  ```
+    <html>
+    	<head>
+        	<title>Document</title>
+    	</head>
+    	<body>
+    	Isi Konten
+    	</body>
+    </html>
+    ```
+-  Html Comment
+   ```html
+   <!-- ini adalah syntax comment html -->
+   <p style="color: red;">Belajar Bersama Skilvul</p> 
+   ```
+   Dengan menggunakan HTML Comment, kita dapat memberikan penjelasan maksud dari line code yang kita kerjakan atau bisa digunakan untuk mematikan code.
 
-    <div align="justify">Sintak diatas biasa disebut dengan kerangka bahasa pemrograman HTML. Didalam website selalu ada title untuk tiap-tiap web, untuk memasukkan title didalam web kamu harus mengetikkan diantara tag title (dapat diisikan dengan nama website kamu atau yang lainnya). Untuk memasukkan konten-konten, kamu dapat memasukkannya atau mengetikkannya didalam program tepat diantara tag body (Ganti titik-titik dengan konten).
 
-  &nbsp;
 
-- Tag HTML
 
-  <div align="justify">Tag adalah sebauh penanda awalan dan akhiran dari sebuah elemen di HTML. Tag dibuat dengan kurung siku (<...>), lalu di dalamnya berisi nama tag dan kadang juga ditambahkan dengan atribut.
-
-  &nbsp;
-
-  <div align="justify">Tag selalu ditulis berpasangan. Ada tag pembuka dan ada tag penutupnya. Namun, ada juga beberapa tag yang tidak memiliki pasangan penutup. Tag penutup ditulis dengan menambahkan garis miring (/) di depan nama tag.
-
-  &nbsp;
-
-  Contoh tag HTML
+###   contoh tag HTML
 
   - Tag untuk membuat tulisan tebal dan miring
 
@@ -106,9 +130,6 @@
     <b>Tebal</b> <i>Miring</i>
     ```
 
-    Hasilnya di browser
-
-    ![](gambar/tebal-miring.JPG)
 
   - Tag HTML Untuk Membuat tulisan dengan link
 
@@ -116,14 +137,10 @@
     <a href="">Welcome To AMMAN Coding Bootcamp BATCH 3</a>
     ```
 
-    Hasilnya di web browser
-
-    ![](gambar/link.jpg)
 
   - Tag Untuk Membuat Daftar/List
 
     - Ordered List
-
       ```html
       <ol>
         Dafunda
@@ -132,10 +149,6 @@
         <li>Dafunda Games</li>
       </ol>
       ```
-
-      Hasilnya di web browser
-
-      ![](gambar/ol.jpg)
 
     - Unordered List
 
@@ -148,37 +161,51 @@
       </ul>
       ```
 
-      Hasilnya di web browser
-
-      ![](gambar/ul.jpg)
-
   - Tag HTML Untuk Menampilkan gambar
 
     ```html
     <img src="https://bit.ly/2FKluzq" alt="Si Kucing"></img>
     ```
-
-    Hasilnya di web browser
-
-    ![](gambar/gambar.jpg)
-
+    
+    - ### **Semantic Html**
+      Semantic HTML yaitu menggunakan elemen HTML sesuai dengan kebutuhan konten. Contoh yaitu header, footer, nav, section, aside, dll.
+    
+      ```html
+          <body>
+        
+          <header>
+            <h1>My Blog</h1>
+          </header>
+        
+          <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a> |
+            <a href="#">Contact</a>
+          </nav>
+        
+          <article>
+            <h1>Welcome To My Blog!</h1>
+            <p>Perkenalkan nama saya Rizky dwi putra lubis . Biasa dipanggil rizky. Saat ini aku tenggah mengikuti Studi Independen Program Skilvul Tech4Impact: Back-end Web Development. 
+            </p>
+          </article>
+        
+          <footer>
+            Copyright &copy; 2022 by Rizky Dwi putra
+          </footer>
+        
+          </body>
+        ```
     &nbsp;
 
-- Deploy HTML
-
-  <div align="justify">Deploy adalah sebuah proses untuk menyebarkan aplikasi yang sudah kita kerjakan supaya bisa digunakan oleh orang-orang. Jika aplikasi kita HTML atau Web App kita perlu mendeploy ke server. Untuk melakukan hal tersebut kita bisa menggunakan layanan yang bernama Netlify
-
-## CSS
+## CSS (Cascading Style Sheets) (21 September 2022)
 
 - Definisi CSS
 
-  <div align="justify">CSS adalah bahasa komputer yang digunakan untuk menambahkan design ke suatu halaman website di internet agar terlihat lebih cantik/menarik. CSS adalah singkatan dari Cascading Style Sheets. Kita ibaratkan HTML adalah kerangka yang memberi sturuktur pada website, maka CSS adalah baju yang memberi warna dan layout pada website.
-
-&nbsp;
+  CSS adalah  bahasa yang digunakan untuk mendesain halaman website.dan biasanya digunakan untuk mengatur tampilan elemen yang tertulis dalam bahasa markup, seperti HTML. Kita ibaratkan HTML adalah kerangka yang memberi sturuktur pada website, maka CSS adalah baju yang memberi warna dan layout pada website.
 
 - Cara Menggunakan CSS
 
-  1. Inline Styles
+  #### 1. Inline Styles
 
      Kita menambahkann CSS langsung pada atribut HTML
 
@@ -186,11 +213,7 @@
      <p style="color:red">Tulisan ini berwarna merah</p>
      ```
 
-     ![](gambar/inline.jpg)
-
-  &nbsp;
-
-  2. Internal CSS
+  #### 2. Internal CSS
 
      Kita menggunakan element/tag `<style>` untuk menyisipkan kode CSS. element/tag `<style>` diletakkan di dalam element `<head>`
 
@@ -218,19 +241,13 @@
      </html>
      ```
 
-     Tampilan dari sintaks diatas adalah
+  #### 3. Eksternal CSS
 
-     ![](gambar/internal-css.jpg)
-
-     &nbsp;
-
-  3. Eksternal CSS
-
-     <div align="justify">Kita akan menyisipkan kode CSS dengan cara membuat file CSS terpisah, dan lalu menyambungkannya dengan file HTML dengan menggunakan element <link>. Element <link> tersebut diletakkan di dalam element <head>
+     Kita akan menyisipkan kode CSS dengan cara membuat file CSS terpisah, dan lalu menyambungkannya dengan file HTML dengan menggunakan element <link>. Element <link> tersebut diletakkan di dalam element <head>
 
      Contoh:
 
-     <div align="justify">Kita memiliki dua file: index.html untuk file HTML-nya dan styles.css untuk file CSS-nya.
+     Kita memiliki dua file: index.html untuk file HTML-nya dan styles.css untuk file CSS-nya.
 
      ```html
      <!-- File index.html -->
@@ -261,180 +278,167 @@
        color: black;
      }
      ```
+ - ### **CSS Class Name**
 
-     Tampilan dari sintaks diatas adalah
+    Cara menggunakan attribute class pada elemen HTML yaitu dengan cara memanggil nama class tersebut pada file CSS
 
-     ![](gambar/ekstenal-css.jpg)
+      ```html
+      <!-- File Html -->
+      <h1 class="title">My Profile</h1>
+      ```
 
-     &nbsp;
+      ```css
+      <!-- File Css -->
+      .title {
+        color : aqua;
+      }
+      ```
+- ### **CSS - ID Name**
 
-- CSS Syntax
+  Berbeda dengan Class Name. ID Name bersifat unik artinya hanya ada 1 nama ID pada 1 element HTML.
 
-  <div align="justify">CSS Syntax adalah syntax yang digunakan untuk menunjuk atau memilih HTML element mana yang ingin diberi style (dihias). CSS syntax terdiri dari selector, property, dan value.
-
-  Syntaxnya seperti ini:
-
+  ```html
+  <!-- File Html -->
+  <p id="paragrafSatu">Namaku Krizz</p>
+  ```
   ```css
-  p {
-    color: blue;
+  <!-- File Css -->
+  #paragrafSatu {
+    border: solid red;
   }
   ```
 
-  Penjelasan :
+## Algoritma dan Introduction JavaScript (22 September 2022)
 
-  - p
+- ### Algoritma
 
-    Adalah sebuah selector berupa element HTML yang akan diubah
+  - Algortima Adalah deskripsi berupa step-step yang dibutuhkan untuk menyelesaikan suatu masalah. Untuk menyelesaikan suatu masalah, tentunya kita harus mempunyai data struktur, nah data inilah yang akan kita gunakan untuk menyelesaikan suatu masalah dengan menggunakan algoritma.
 
-  - color
 
-    <div align="justify">Adalah sebuah properti berupa bagian mana dari element HTML yang akan diubah. Contoh diatas kita akan mengubah warna dari teks yang ada di element p
-
-  - blue
-
-    Adalah value yaitu nilai/hiasan berupa warna biru
-
-  &nbsp;
-
-## Algoritma dan Struktur Data
-
-- Algoritma
-
-  - <div align="justify">Algortima Adalah deskripsi berupa step-step yang dibutuhkan untuk menyelesaikan suatu masalah. Untuk menyelesaikan suatu masalah, tentunya kita harus mempunyai data struktur, nah data inilah yang akan kita gunakan untuk menyelesaikan suatu masalah dengan menggunakan algoritma.
-
-  &nbsp;
 
   - Mengapa kita memerlukan algoritma?
 
     Manfaat algoritma antara lain:
 
-    - <div align="justify">Membantu menyederhanakan suatu program yang rumit dan juga besar.
-    - <div align="justify">Mempermudah pembuatan program yang dapat menyelesaikan masalah tertentu.
-    - <div align="justify">Membantu menyelesaikan suatu masalah dengan logika dan juga sistematis.
+    - Membantu menyederhanakan suatu program yang rumit dan juga besar.
+    - Mempermudah pembuatan program yang dapat menyelesaikan masalah tertentu.
+    - Membantu menyelesaikan suatu masalah dengan logika dan juga sistematis.
 
-  &nbsp;
+    Algoritma sederhana dalam bahasa pemrograman javascript.
+    ```javascript
+        let angka = 2;
+        let hasil;
 
-  - Kualitas Algortima
-
-    Kualitas wajib dari algoritma
-
-    - <div align="justify">Input dan output harus didefinisikan terlebih dahulu dengan tepat
-    - <div align="justify">Setiap step harus benar-benar clear dan tidak ambigu
-    - <div align="justify">Algoritma seharusnya tidak mengandung suatu code pada bahasa pemograman tertentu.
-    - <div align="justify">Algoritma harus dibuat agar dapat digunakan dalam bahasa pemograman apapun.
-
-    &nbsp;
-
-  - Penggunaan Algortima
-
-    - Soal
-      <div align="justify">Buatlah Algoritma untuk menyelesaikan problem ini
-
-      David memiliki program yang membutuhkan untuk convert data dari jumlah jam ke detik
-
-      Contohnya jika program memiliki input 2 jam maka output yang diharapkan adalah 7200 detik
-
-    - Jawaban
-
-      - Mulai
-      - Deklarasi variabel n, hasil_convert
-      - Menambahkan nilai n
-      - <div align="justify">Melakukan proses (n jam = n \* 3600" lalu disimpan ke dalam hasil_convert
-      - Menampilkan hasil convert (n jam) = + "detik"
-      - Stop
-
-    &nbsp;
-
-- Pseudocode
-
-  - <div align="justify">Pseudocode adalah menuliskan algoritma sebelum kita implementasikan ke bahasa pemograman tertentu.
-
-    &nbsp;
-
-  - Bagaimana menulis pseudocode
-
-    - <div align="justify">Menggunakan HURUF BESAR pada kata kunci (key commands).
-
-      CONTOH: IF number is > 10 THEN …
-
-    - 1 statement = 1 baris
-    - Gunakan indentasi
-    - Simpel
-
-    Contoh :
-
-    ```md
-    STORE "width" with any number
-    STORE "height" with any nummber
-    STORE "area" without any value
-
-    CALCULATE "width" times "height"
-    SET "area" value with calculation result
-    DISPLAY "area"
+        hasil = angka * 5;
+        console.log(hasil);
     ```
+    Algoritma sederhana dalam kehidupan sehari-hari.
+    ```javascript
+        1. Pergi ke kekamar
+        2. Berangkat ke kampus
+    ```
+  &nbsp;
+  - ### Javascipt Dasar
+    __JavaScript__ merupakan bahasa pemrograman yang digunakan untuk membuat web menjadi lebih interaktif dan responsive.
+    Untuk menjalankan javascript pada umumnya menggunakan web browser seperti Chrome, Microsoft Edge, Mozila Firefox, kalau pakai code editor Visual Studio Code bisa di bagian console.
 
-    &nbsp;
+    Adapun Macam - macam Tipe Data di JavaScript :
+    - `String`
+    - `Number`
+    - `Boolean`
+    - `Object`
+    - `Array`
+    ### Penggunaan Javascript 
+    Hal yang pertama harus kita lakukan pada penggunaan javascript adalah menghubungkan HTML dengan Javascript karena JS bukanlah bahasa pemograman yang bisa berdiri sendiri. `<script src = "Script.js"></script> ` javascript siap digunakan. Pada bahasa pemograman ini terdapat beberapa operator dasar yang wajib dipahami bagi seseorang developer yaitu
+    
+     &nbsp;
+     
+    ## Js Dasar Condicional dan Looping (23 September 2022)
+    __Conditional__ merupakan statement percabangan yang menggambarkan suatu kondisi, statement akan mengecek kondisi spesifik dan menjalankan perintah berdasarkan kondisi tersebut. Yang dicek adalah apakah kondisi tersebut TRUE (benar).
+    Adapun beberapa kondisi javascipt:
+    - `Kondisi if`  untuk mengeksekusi suatu kumpulan perintah apabila kondisi tertentu bernilai true
+    - `Kondisi else`   untuk mengeksekusi suatu kumpulan perintah apabila kondisi tertentu bernilai false
+    - `Kondisi else if`  untuk pemeriksaan kondisi berikutnya apabila kondisi sebelumnya bernilai false
+    - `Kondisi switch`  untuk mengeksekusi suatu kumpulan perintah berdasarkan beberapa pilihan
+    
+     &nbsp;
+    **Penulisan IF**
+    ```
+    	if (umur < 30) {
+          return "anda sudah Dewasa";
+        }
+    ```
+    
+    **Penulisan Else**
+    ```
+    	if (umur < 30) {
+          return "anda sudah Dewasa";
+        } else {
+           return "anda masih dibawah umur";
+        }
+    ```
+    **Penulisan Else if**
+    ```
+         if (umur < 30) {
+          return "anda sudah Dewasa";
+        } else  if (umur < 18) {
+            return "anda sudah remaja";
+        } else {
+          return "anda masih dibawah umur";
+        }
+    ```
+    **Penulisan Else if**
+    ```
+         if (umur < 30) {
+          return "anda sudah Dewasa";
+        } else  if (umur < 18) {
+            return "anda sudah remaja";
+        } else {
+          return "anda masih dibawah umur";
+        }
+    
+    ```
+    **Penulisan Else if**
+     ```
+            switch (grade) {
+               case 'A': 
+                return "Nilai anda luarbiasa";
+               break;
+               case 'B': 
+                   return "Nilai anda sangat bagus";
+               break;
+               case 'C':
+                   return "nilai anda cukup";
+               break;
+               case 'D': 
+                 return "nilai anda buruk";
+               break;
+               case 'F': 
+                 return "nilai sangat anda buruk";
+               break;
+               default:  
+                    return "tidak dikenal";
+            }
+     ```
+     &nbsp;
+     
+      __Looping__ adalah statement yang mengulang atau perulangan sebuah instruksi hingga kondisi terpenuhi atau jika kondisi stop atau berhenti tercapai. Misal menggunakan perulangan For Loop contoh statement
+      
+      for loop memiliki aturan tersendiri dalam penulisannya
+    ```
+        for(initialization; condition; post-expression){
+            
+        }
+    ```
+    
+    contoh penggunaan for loop 
+    ```
+        let angka = 1;
+        for (angka; angka <= 10; angka++){
+            console.log(angka);
+        }
+        //outputnya : 1 2 3 4 5 6 7 8 9 10
+    ```
+ 
 
-  - Pseudocode berdasarkan kondisi masalah
-
-    - Procedural
-
-      Procedural adalah cara berpikir secara runtun. Artinya serangkaian perintah yang berurutan.
-
-      Contoh :
-
-      ```md
-      STORE "width" with any number
-      STORE "height" with any nummber
-      STORE "area" without any value
-
-      CALCULATE "width" times "height"
-      SET "area" value with calculation result
-      DISPLAY "area"
-      ```
-
-      &nbsp;
-
-    - Conditional
-
-      Conditional digunakan saat dibutuhkan percabangan kasus. Komputer akan melakukan suatu tindakan jika suatu kondisi terpenuhi.
-
-      Jika hari ini tidak hujan, maka Bob pergi ke pasar,
-
-      jika tidak maka Bob dirumah aja.
-
-      ```md
-      IF "bright"
-      DO "go to the market"
-      ELSE
-      DO "stay at home"
-      ```
-
-    &nbsp;
-
-    - Looping
-
-      Komputer dapat melakukan sebuah proses yang sama berulang-ulang.
-
-      Jika membutuhkan perulangan dalam kasus tertentu, kita bisa menggunakan Looping.
-
-      Contoh :
-
-      ```md
-      STORE "count" t0 1
-
-      WHILE "count" < 11
-      DISPLAY "count"
-      CALCULATE "count" mod 2
-      STORE "reminder" value with calculation result
-      IF "reminder" equals to 0
-      DISPLAY "EVEN!"
-      ELSE
-      DISPLAY "ODD!"
-      ```
-
-      &nbsp;
-
-    - Recursive
-
-      Recursive adalah pola pikir dalam algoritma yang memanggil method/function didalam sebuah function
+  
