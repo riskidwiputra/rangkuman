@@ -16,7 +16,7 @@
   - mv (move), untuk memindahkan file directory
   - rm (remove), untuk menghapus file directory
 
-- ### Apa itu Git & Github
+- ### Apa itu Git 
    #### Git
     Merupakan aplikasi/software yang dapat melacaks suatu perubahan yang terjadi di suatu folder ataupun file, yang biasanya digunakan oleh programmer sebagai tempat untuk menyimpan file programan mereka karena lebih efektif.
 
