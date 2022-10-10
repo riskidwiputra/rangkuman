@@ -1,6 +1,6 @@
 # **Rangkuman Week2**
 
-## **JavaScript Dasar Scope and Function **
+## **JavaScript Dasar Scope and Function**
 
 ## Scope
 Scope adalah konsep dalam flow data variabel, yang menentukan suatu variabel bisa diakses pada scope tertentu atau tidak, dan digunakan untuk membatasi pengaksesan suatu variabel. Scope pada javascript memiliki 2 jenis yaitu local scope dan global scope
